@@ -117,6 +117,20 @@ keybinds clear-defaults=true {
             };
             SwitchToMode "Normal"
         }
+        bind "c" {
+            LaunchOrFocusPlugin "zellij:configuration" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
+        bind "p" {
+            LaunchOrFocusPlugin "zellij:plugin-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
     }
     shared_except "locked" {
       bind "Alt f" { 
@@ -158,8 +172,13 @@ keybinds clear-defaults=true {
     shared_except "move" "locked" {
         bind "Alt m" { SwitchToMode "Move"; }
     }
-    shared_except "tmux" "locked" {
-        bind "Ctrl a" { SwitchToMode "Tmux"; }
+    shared_except "locked" {
+        bind "Alt ?" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+            "LOAD_ZELLIJ_BINDINGS" "false"
+            floating true
+            }
+        }
     }
 }
 
@@ -170,4 +189,3 @@ ui {
 }
 
 theme "kanagawa"
-
