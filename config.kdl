@@ -179,6 +179,13 @@ keybinds clear-defaults=true {
             floating true
             }
         }
+        bind "Alt c" {
+            LaunchOrFocusPlugin "zellij:configuration" {
+                floating true
+                move_to_focused_tab true
+            };
+            // SwitchToMode "Normal"
+        }
     }
 }
 
