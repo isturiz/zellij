@@ -187,5 +187,6 @@ ui {
         rounded_corners true
     }
 }
+default_shell "/opt/homebrew/bin/fish"
 
 theme "kanagawa"
